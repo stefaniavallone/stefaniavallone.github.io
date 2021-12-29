@@ -1,0 +1,12 @@
+Several hospitals are trying to counter the negative effects due to delayed detection of sepsis, clinical syndrome characterized by
+an abnormal Systemic Inflammatory Response (SIRS). In this thesis comes presented a software application to support doctors in identifying automatic of such types of infections. The aim is to facilitate the task of doctors in uncertainty situations about the clinical diagnosis of sepsis as the algorithm used evaluates specific clinical parameters.
+The application extracts all the information in a medical record and uses natural language processing tools to provide medical diagnosis. Two types of users can access this application: 
+	• the administrator
+	• the user. 
+The first has the task of registering collaborators providing him with username and password. Collaborators can manage the various patients keeping track of all reports and their analyses. The interface provides a visual feedback in case a sepsis infection is diagnosed for a determined patient. 
+
+Project Details:
+Kind: Personal project
+Group: 2 people
+Technologies: Java, SQL DB model
+Date: December 2017
