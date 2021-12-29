@@ -23,6 +23,7 @@ function sendMail() {
       redirect: 'follow'
     };
     
+    
     fetch("https://email-sender-protected.herokuapp.com/send", requestOptions)
       .then(response => response.text())
       .then(result => console.log(result))
