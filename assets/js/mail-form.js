@@ -27,5 +27,5 @@ function sendMail() {
     fetch("https://email-sender-protected.herokuapp.com/send", requestOptions)
       .then(response => response.text())
       .then(result => console.log(result))
-      .catch(error => console.log('error', error));
+      .catch(error => $('#contact')[0].reset());
 }

@@ -1,28 +1,4 @@
-/*
 
-Breezed Template
-
-https://templatemo.com/tm-543-breezed
-
-*/
-
-/* ---------------------------------------------
-Table of contents
-------------------------------------------------
-01. font & reset css
-02. reset
-03. global styles
-04. header
-05. banner
-06. features
-07. testimonials
-08. contact
-09. footer
-10. preloader
-11. search
-12. portfolio
-
---------------------------------------------- */
 /* 
 ---------------------------------------------
 font & reset css
@@ -165,26 +141,6 @@ a.main-stroked-button:hover {
   background-color: #fff;
   color: #5fb759;
 }
-
-/* a.main-filled-button {
-  font-size: 13px;
-  border-radius: 25px;
-  padding: 13px 25px;
-  background-color: #fff;
-  text-transform: uppercase;
-  color: #5fb759;
-  font-weight: 600;
-  letter-spacing: 1px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-} */
-
-/* a.main-filled-button:hover {
-  color: #fff;
-  background-color: #5fb759;
-} */
 
 a.main-button-icon {
   font-size: 13px;
@@ -788,6 +744,27 @@ banner
   max-width: none;
 }
 
+.face-photo{
+  align-items: center;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.face-photo img{
+  width: 60%;
+  border-radius:999em;   
+-moz-border-radius:999em; 
+-webkit-border-radius:999em;
+  -o-border-radius: 999em;
+}
+
+
 *,
 *:before,
 *:after {
@@ -1005,7 +982,6 @@ about
   line-height: 27px;
   color: rgb(0, 0, 0);
 }
-
 
 /*
 ---------------------------------------------

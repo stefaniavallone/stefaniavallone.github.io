@@ -4,10 +4,11 @@
  * animation tracking-in-contract
  * ----------------------------------------
  */
- .tracking-in-contract {
-	-webkit-animation: tracking-in-contract 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both!important;
-    animation: tracking-in-contract 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both!important;
-    animation-delay: 1.2!important;
+
+.tracking-in-contract {
+-webkit-animation: tracking-in-contract 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both!important;
+  animation: tracking-in-contract 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both!important;
+  animation-delay: 1.2!important;
 }
 
  @-webkit-keyframes tracking-in-contract {
@@ -38,19 +39,18 @@
   }
   
 
-
-
-
 /**
  * ----------------------------------------
  * animation text-focus-in
  * ----------------------------------------
  */
- .text-focus-in {
-	-webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both!important;
-	animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both!important;
-    animation-delay: 1.2s!important;
- }
+
+.text-focus-in {
+-webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both!important;
+animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both!important;
+  animation-delay: 1.2s!important;
+}
+
 @-webkit-keyframes text-focus-in {
     0% {
       -webkit-filter: blur(12px);
@@ -75,3 +75,41 @@
       opacity: 1;
     }
   }
+
+
+/**
+ * ----------------------------------------
+ * animation slide-in-fwd-center
+ * ----------------------------------------
+ */
+
+.slide-in-fwd-center {
+-webkit-animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation-delay: 1s!important;
+}
+
+@-webkit-keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+            transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+            transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
