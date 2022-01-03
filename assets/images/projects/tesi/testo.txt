@@ -8,5 +8,17 @@ The first has the task of registering collaborators providing him with username 
 Project Details:
 Kind: Personal project
 Group: 2 people
-Technologies: Java, SQL DB model
+Technologies: Java, SQL DB model, CoreNLP
 Date: December 2017
+
+
+Questo progetto è stato sviluppato nell'ambito della gestione dati per l’Evidence Based Medicine.
+Viene presentata un’applicazione per l’estrazione e l’analisi di informazioni presenti
+nelle cartelle cliniche allo scopo di identificare in maniera automatica una diagnosi
+medica. 
+Il processo avviene attraverso le seguenti fasi:
+	• Acquisizione dei dati necessari per determinare la presenza di Sepsi;
+	• Estrazione dei contenuti di alto livello tramite tecniche NLP;
+	• Definizione dei dati individuati e relativo salvataggio in frame strutturati; 
+	• Implementazione delle strutture dati evidenziati in Ontologie al fine di rappresentare la conoscenza estratta;
+	• Filtraggio, implementazione di grafici e comprensione dei dati tramite criteri medici necessari all’individuazione della diagnosi

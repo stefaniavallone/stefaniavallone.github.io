@@ -737,8 +737,8 @@ banner
 }
 
 .img-fill img {
-  min-height: 10%;
-  min-width: 45%;
+  min-height: 100%;
+  min-width: 100%;
   position: relative;
   display: inline-block;
   max-width: none;
@@ -757,14 +757,15 @@ banner
   padding-bottom: 40px;
 }
 
-.face-photo img{
+.img-fill .face-photo img{
   width: 60%;
+  min-height: 10%;
+  min-width: 45%;
   border-radius:999em;   
 -moz-border-radius:999em; 
 -webkit-border-radius:999em;
   -o-border-radius: 999em;
 }
-
 
 *,
 *:before,
