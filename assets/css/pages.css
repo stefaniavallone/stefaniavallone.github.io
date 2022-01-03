@@ -992,8 +992,11 @@ what i do
 */
 
 #what-i-do {
-  padding-top: 80px;
-  padding-bottom: 70px;
+  background-image: url(../images/what-i-do.jpg);
+  padding: 80px 0px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #what-i-do .what-i-do-item {
@@ -1021,208 +1024,6 @@ what i do
 .what-i-do-item .what-i-do-content p {
   margin-bottom: 15px;
 }
-
-
-
-/*
----------------------------------------------
-subscribe
----------------------------------------------
-*/
-
-#subscribe {
-  padding: 80px 0px;
-  background-image: url(../images/slide-02.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#subscribe .section-heading {
-  text-align: center;
-  color: #fff;
-  margin-bottom: 25px;
-}
-
-#subscribe p {
-  text-align: center;
-  font-size: 16px;
-  line-height: 27px;
-  color: #fff;
-  margin-bottom: 40px;
-}
-
-#subscribe input {
-  width: 100%;
-  height: 38px;
-  border-radius: 19px;
-  border: 1px solid #fff;
-  background-color: transparent;
-  padding: 0px 20px;
-  font-size: 13px;
-  color: #fff;
-  outline: none;
-}
-
-.subscribe-form ::-webkit-input-placeholder { /* Edge */
-  color: #fff;
-}
-
-.subscribe-form :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: #fff;
-}
-
-.subscribe-form ::placeholder {
-  color: #fff;
-}
-
-@media (max-width: 767px) {
-  #subscribe fieldset {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-}
-
-/*
---------------------------------------------
-testimonials
---------------------------------------------
-*/
-#testimonials {
-  margin-top: 120px;
-  padding: 80px 0px;
-  padding: 120px 0px;
-  background-image: url(../images/slide-03.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#testimonials .section-heading {
-  text-align: center;
-  color: #fff;
-  margin-bottom: 60px;
-}
-
-#testimonials .item {
-  position: relative;
-  text-align: center;
-}
-
-#testimonials .item h4 {
-  font-size: 17px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
-  letter-spacing: 1px;
-  margin-top: 22px;
-  margin-bottom: 7px;
-}
-
-
-#testimonials .item span {
-  color: #fff;
-  font-weight: 500;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-#testimonials .item .member-thumb {
-  position: relative;
-}
-
-#testimonials .item .hover-effect {
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(0,0,0,0.95);
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
-}
-
-#testimonials .item .hover-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-}
-
-#testimonials .item:hover .hover-effect {
-  opacity: 1;
-  visibility: visible;
-}
-
-#testimonials .item .hover-effect ul li {
-  display: inline-block;
-  margin: 0px 5px;
-}
-
-#testimonials .item .hover-effect ul li a {
-  width: 32px;
-  height: 32px;
-  display: inline-block;
-  text-align: center;
-  line-height: 32px;
-  font-size: 14px;
-  background-color: #fff;
-  border-radius: 50%;
-  color: #5fb759;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-#testimonials .item .hover-effect ul li a:hover {
-  color: #fff;
-  background-color: #5fb759;
-}
-
-#testimonials .owl-carousel {
-  padding-bottom: 60px;
-}
-
-.owl-dots {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-}
-
-.owl-dots .owl-dot {
-  outline: none;
-  height: 10px;
-}
-
-.owl-dots .owl-dot span {
-  width: 8px;
-  height: 8px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0px 5px;
-  outline: none;
-  -webkit-transition: all 0.2s ease 0s;
-  -moz-transition: all 0.2s ease 0s;
-  -o-transition: all 0.2s ease 0s;
-  transition: all 0.2s ease 0s;
-}
-
-.owl-dots .active span {
-  width: 10px;
-  height: 10px;
-  margin-bottom: -1px;
-}
-
-
-
 
 
 /* 
@@ -1626,7 +1427,12 @@ portfolio
 }
 
 #projects {
-  padding-top: 120px;
+  /* padding-top: 120px; */
+  background-image: url(../images/projects.jpg);
+  padding: 80px 0px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #projects .section-heading {
