@@ -1443,3 +1443,7 @@ portfolio
     margin-bottom: 0px;
   }
 }
+
+#modalTerms .modal-body{
+  padding: 15px;
+}
