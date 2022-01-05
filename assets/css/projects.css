@@ -1,6 +1,6 @@
 .img-size{
       height: 500px;
-      width: 100%;
+      max-width: 100%;
       background-size: cover;
       overflow: hidden;
       padding-left: 15px;
@@ -25,3 +25,9 @@
       width: 30px;
       height: 48px;
     }
+
+@media (min-width:100%){
+  #popup{
+      left:calc(50% - 277px); /* 277px is the half of 555px */
+  }
+}
