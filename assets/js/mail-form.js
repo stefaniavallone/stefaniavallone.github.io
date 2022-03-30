@@ -9,11 +9,11 @@ function sendMail() {
     myHeaders.append("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36");
     myHeaders.append("Content-Type", "application/json");
     
-    var raw = JSON.stringify({
-      "from_address": "sdasa",
+  var raw = JSON.stringify({
+      "from_address": fromAddress,
       "to_address": "stefaniaavallone3@gmail.com",
-      "subject": "sdasa",
-      "body": "sdasa"
+      "subject":subject,
+      "body": body
     });
     
     var requestOptions = {
@@ -26,6 +26,13 @@ function sendMail() {
     
     fetch("https://email-sender-protected.herokuapp.com/send", requestOptions)
       .then(response => response.text())
-      .then(result => console.log(result))
-      .catch(error => $('#contact')[0].reset());
+      .then(result =>  onclick="modal();")
+    }
+
+function modal(){
+  $('.modal').modal('show');
+  setTimeout(function () {
+    console.log('hejsan');
+    $('.modal').modal('hide');
+  }, 3000);
 }
