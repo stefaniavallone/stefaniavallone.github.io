@@ -5,7 +5,7 @@ function sendMail() {
     body =  $('#body-message').val();
     var myHeaders = new Headers();
     myHeaders.append("Accept", "*/*");
-    myHeaders.append("Referer", "http://127.0.0.1:5500/?subject=Stefania+Avallone&from_address=crispogioele%40gmail.com&to_address=stefaniaavallone3%40gmail.com&body=sfd");
+    // myHeaders.append("Referer", "http://127.0.0.1:5500/?subject=Stefania+Avallone&from_address=crispogioele%40gmail.com&to_address=stefaniaavallone3%40gmail.com&body=sfd");
     myHeaders.append("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36");
     myHeaders.append("Content-Type", "application/json");
     
@@ -20,29 +20,20 @@ function sendMail() {
       method: 'POST',
       headers: myHeaders,
       body: raw,
-      redirect: 'follow'
+      // redirect: 'follow'
     };
     
     
-    // fetch("https://email-sender-protected.herokuapp.com/send", requestOptions)
-    //   .then(response => response.text())
-    //   .then(result =>  onclick="modal();")
-    
-
-    fetch('https://email-sender-protected.herokuapp.com/send', {
-      method:"post",
-      body: requestOptions
-    })
-    .then(data => {
-      response => response.text()
-      onclick="modal()";
-    });
+    fetch("https://email-sender-protected.herokuapp.com/send", requestOptions)
+      .then(response => response.text())
+      .then(data => modal())
   }
 
 function modal(){
-  $('.modal').modal('show');
+  var modal_content = document.getElementById("modalMail");
+  modal_content.modal('show');
   setTimeout(function () {
     console.log('hejsan');
-    $('.modal').modal('hide');
+    modal_content.modal('hide');
   }, 3000);
 }
