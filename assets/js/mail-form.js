@@ -36,22 +36,20 @@ function OnSubmit(form) {
   $.ajax({
       url: 'https://email-sender-protected.herokuapp.com/send',
       type: 'POST',
+      headers: myHeaders,
       data: {
           body: raw
       },
       success: function(msg) {
-          alert('Email Sent');
-          emptyInput();
+          $("#modalMail").text('Your email has been sent sucessfully');
+          $("#modalMail").modal('show');
+          $('#contact')[0].reset();
+          table_data.ajax.reload(null, false);
           return false;
       },
       error: function(){
-        console.log("Email error")
+        $("#modalMail").text('There were problems with your email. Try again later please!');
+        $("#modalMail").modal('show');
       }
     });
-}
-
-function emptyInput(){
-  $('#name').val("");
-  $('#from_address').val("");
-  $('#body-message').val("");
 }
