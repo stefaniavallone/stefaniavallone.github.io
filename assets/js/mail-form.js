@@ -24,10 +24,20 @@ function sendMail() {
     };
     
     
-    fetch("https://email-sender-protected.herokuapp.com/send", requestOptions)
-      .then(response => response.text())
-      .then(result =>  onclick="modal();")
-    }
+    // fetch("https://email-sender-protected.herokuapp.com/send", requestOptions)
+    //   .then(response => response.text())
+    //   .then(result =>  onclick="modal();")
+    
+
+    fetch('https://email-sender-protected.herokuapp.com/send', {
+      method:"post",
+      body: requestOptions
+    })
+    .then(data => {
+      response => response.text()
+      onclick="modal()";
+    });
+  }
 
 function modal(){
   $('.modal').modal('show');
