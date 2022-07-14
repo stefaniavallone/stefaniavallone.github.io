@@ -28,6 +28,12 @@ function OnSubmit(form) {
   // myHeaders.append("Referer", "http://127.0.0.1:5500/?subject=Stefania+Avallone&from_address=crispogioele%40gmail.com&to_address=stefaniaavallone3%40gmail.com&body=sfd");
   myHeaders.append("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36");
   myHeaders.append("Content-Type", "application/json");
+  let messageData = {
+    'from_address': fromAddress,
+    'to_address': toAddress,
+    'subject': subject,
+    'body': body
+}
   $.ajax({
       url: 'https://email-sender-protected.herokuapp.com/send',
       dataType: 'json',
@@ -35,12 +41,7 @@ function OnSubmit(form) {
       contentType: 'application/json',
       processData: false,
       data: {
-          body: jQuery.param({
-            from_address: fromAddress,
-            to_address: "stefaniaavallone3@gmail.com",
-            subject: subject,
-            body: body
-          }),
+          body: messageData,
       },
       success: function(msg) {
           $("#modalMail").text('Your email has been sent sucessfully');
