@@ -25,10 +25,10 @@ var raw = JSON.stringify({
   
   
   fetch("https://email-sender-protected.herokuapp.com/send", requestOptions)
-    .then(response => response.text())
-    .then(result =>  onclick="modal();")
-  }
+      .then(response => response.text())
+      .then(data => modal())
 
+    }
 function modal(){
   let context = document.getElementById("modalMail");
   var myModal = new bootstrap.Modal(context, {});
@@ -38,6 +38,6 @@ function modal(){
     let context = document.getElementById("modalMail");
     var myModal = new bootstrap.Modal(context, {});
         console.log('hejsan');
-        $('.modal').modal('hide');
+        myModal.modal('hide');
       }, 3000);
 }
