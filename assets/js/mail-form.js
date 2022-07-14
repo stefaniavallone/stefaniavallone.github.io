@@ -35,18 +35,21 @@ function OnSubmit(form) {
       contentType: 'application/json',
       processData: false,
       data: {
-          body: JSON.stringify({
-            "from_address": fromAddress,
-            "to_address": "stefaniaavallone3@gmail.com",
-            "subject":subject,
-            "body": body
+          body: jQuery.param({
+            from_address: fromAddress,
+            to_address: "stefaniaavallone3@gmail.com",
+            subject: subject,
+            body: body
           }),
       },
       success: function(msg) {
           $("#modalMail").text('Your email has been sent sucessfully');
           $("#modalMail").modal('show');
+          setTimeout(function () {
+            console.log('hejsan');
+            $('.modal').modal('hide');
+          }, 3000);
           $('#contact')[0].reset();
-          table_data.ajax.reload(null, false);
           return false;
       },
       error: function(){
