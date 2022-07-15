@@ -307,6 +307,7 @@
                             <div class="col-lg-6 col-xs-12 all game">
                                 <div class="item">
                                     <div class="card" data-target="#modalProject" data-toggle="modal" 
+                                        data-project-title="UFO Game"
                                         data-project-info="In my free time I like to design games and for this reason I realized ufo-game, using pycharm"
                                         data-area-project="Game"
                                         data-tecnologies-project="Python - PyGame"
@@ -323,12 +324,14 @@
                             <div class="col-lg-6 col-xs-12 all game mobile">
                                 <div class="item">
                                     <div class="card" data-target="#modalProject" data-toggle="modal" 
+                                        data-project-title="Kaboo - Word Game"   
                                         data-project-info="Android Game App built with Kivy framework, written in Python and published on Play Store. It is a word game based on well-known Taboo. A CI/CD Github Action has been developed to improve update and release processes."
-                                        data-area-project="Game"
+                                        data-area-project="Game - Mobile"
                                         data-tecnologies-project="Python - Kivy Framework"
                                         data-group-project="2 person"
                                         data-date-project="Gen 2022"
                                         data-carousel-indicators="6"
+                                        data-frame-carousel='https://www.youtube.com/embed/qr9I3LjdkSw?autoplay=1&mute=1&showinfo=0'
                                         data-img-carousel="assets/images/projects/kaboo/pregame.jpg,
                                         assets/images/projects/kaboo/game.jpg,
                                         assets/images/projects/kaboo/game_end.jpg, 
@@ -342,6 +345,7 @@
                             <div class="col-lg-6 col-xs-12 all mobile">
                                 <div class="item">
                                     <div class="card" data-target="#modalProject" data-toggle="modal" 
+                                        data-project-title="Releases Manager"    
                                         data-project-info="This project was carried out in Angular. It aims to keep track of all releases made for the various projects managed in NTT DATA. The project was developed for personal use as I managed the various phases (analysis, design, releases, bureaucracy)."
                                         data-area-project="Web App"
                                         data-tecnologies-project="Angular, Java, DB model"
@@ -359,6 +363,7 @@
                             <div class="col-lg-6 col-xs-12 all embedded">
                                 <div class="item">
                                     <div class="card" data-target="#modalProject" data-toggle="modal" 
+                                        data-project-title="Firealarm model"
                                         data-project-info="This project was developed for the management of a home / office in the event of a fire.
                                         A model of the house was created using sensors inserted on the arduino board
                                         we have implemented the management of a fire alarm system.
@@ -378,6 +383,7 @@
                             <div class="col-lg-6 col-xs-12 all mobile">
                                 <div class="item">
                                     <div class="card" data-target="#modalProject" data-toggle="modal" 
+                                        data-project-title="Firealarm portal"
                                         data-project-info="For the management of the fire prevention, the website was created in order to register a user and manage the registered apartment. Through the app it is possible to open the windows of the apartment, emit a jet of water and if you do not log in within a few minutes the call to the fire brigade is made."
                                         data-area-project=""
                                         data-tecnologies-project="C, DB model, HTML, PHP "
@@ -395,6 +401,7 @@
                             <div class="col-lg-6 col-xs-12 all other">
                                 <div class="item">
                                     <div class="card" data-target="#modalProject" data-toggle="modal" 
+                                        data-project-title="Medical data"
                                         data-project-info="This project was developed as part of data management for Evidence Based Medicine.
                                         An application for the extraction and analysis of present information is presented
                                         in medical records in order to automatically identify a diagnosis
@@ -420,6 +427,7 @@
                             <div class="col-lg-6 col-xs-12 all other">
                                 <div class="item">
                                     <div class="card" data-target="#modalProject" data-toggle="modal" 
+                                        data-project-title="Emotion recognition"
                                         data-project-info="This project aims to perform face and emotion recognition through a Kinect sensor or a generic webcam.
                                         The emotion supported are: Happy, Sad, Disgust, Neutral, Fear, Angry, Surprise. The depth camera of the Kinect Sensor is used to carry out Depth Segmentation and reduce face detection false positives. In addition, a confirmation window is used to stabilize the model's predictions.
                                         The model used is a CNN built from scratch and trained on FER 2013 Dataset. Then, an optimization phase has been performed to obtain the best hyperparameters."
@@ -437,6 +445,7 @@
                             <div class="col-lg-6 col-xs-12 all other">
                                 <div class="item">
                                     <div class="card" data-target="#modalProject" data-toggle="modal" 
+                                        data-project-title="Kaboo card manager"
                                         data-project-info="This project aims to provide a convenient tool to manipulate and enlarge the Kaboo game cards. It is intended to help us and anyone who wants to increase the card base for Kaboo and support the game"
                                         data-area-project="Magager"
                                         data-tecnologies-project="Python"
@@ -547,14 +556,16 @@
         </footer>
 
         <!-- Modal for Project -->
-        <div class="modal fade" id="modalProject" tabindex="-1" role="dialog" aria-labelledby="modalTermsTitle" aria-hidden="true">
+        <div class="modal fade" id="modalProject" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
+                        <h3 class="modal-title" id="modalProjectTitle"></h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
+                    
                     <div class="modal-body">
                         <div class="container">
                             <div class="row">
@@ -624,10 +635,10 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                    <h5 class="modal-title" id="modalTermsTitle">Terms & Policy</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                        <h5 class="modal-title" id="modalTermsTitle">Terms & Policy</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                     <div class="modal-body">
                         <div>Design of this site made by: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></div>

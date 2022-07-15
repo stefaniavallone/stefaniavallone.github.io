@@ -33,6 +33,10 @@ $('#modalProject').on('show.bs.modal', function(e) {
             }        
         }
     }
+
+         /* modal title */
+     title = $(e.relatedTarget).data('project-title') 
+     $("#modalProject .modal-title").html(title);
 });
 
 
