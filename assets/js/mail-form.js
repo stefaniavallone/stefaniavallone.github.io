@@ -4,7 +4,7 @@ function sendMail() {
   toAddress = "stefaniaavallone3@gmail.com";
   body =  $('#body-message').val();
 
-  if (fromAddress != "" && subject != "" && body != ""){
+  if (fromAddress != "" && fromAddress.includes("@") && subject != "" && body != "" ){
     $(".spinner-border").show();
     var myHeaders = new Headers();
     myHeaders.append("Accept", "*/*");
