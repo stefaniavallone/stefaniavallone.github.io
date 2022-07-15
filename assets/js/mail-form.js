@@ -3,41 +3,43 @@ function sendMail() {
   fromAddress = $('#from_address').val();
   toAddress = "stefaniaavallone3@gmail.com";
   body =  $('#body-message').val();
-  var myHeaders = new Headers();
-  myHeaders.append("Accept", "*/*");
-  myHeaders.append("Referer", "http://127.0.0.1:5500/?subject=Stefania+Avallone&from_address=crispogioele%40gmail.com&to_address=stefaniaavallone3%40gmail.com&body=sfd");
-  myHeaders.append("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36");
-  myHeaders.append("Content-Type", "application/json");
-  
-var raw = JSON.stringify({
-    "from_address": fromAddress,
-    "to_address": "stefaniaavallone3@gmail.com",
-    "subject":subject,
-    "body": body
-  });
-  
-  var requestOptions = {
-    method: 'POST',
-    headers: myHeaders,
-    body: raw,
-    redirect: 'follow'
-  };
-  
-  
-  fetch("https://email-sender-protected.herokuapp.com/send", requestOptions)
-      .then(response => response.text())
-      .then(data => modal())
 
+  if (fromAddress != "" && subject != "" && body != ""){
+    
+    var myHeaders = new Headers();
+    myHeaders.append("Accept", "*/*");
+    myHeaders.append("Referer", "http://127.0.0.1:5500/?subject=Stefania+Avallone&from_address=crispogioele%40gmail.com&to_address=stefaniaavallone3%40gmail.com&body=sfd");
+    myHeaders.append("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36");
+    myHeaders.append("Content-Type", "application/json");
+    
+  var raw = JSON.stringify({
+      "from_address": fromAddress,
+      "to_address": "stefaniaavallone3@gmail.com",
+      "subject":subject,
+      "body": body
+    });
+    
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
+    
+    
+    fetch("https://email-sender-protected.herokuapp.com/send", requestOptions)
+        .then(response => response.text())
+        .then(data => modal("Your email has been sent successfully"))
+        .catch(error => {
+          modal("There was a problem sending your email. Try later, please!")
+      })
     }
-function modal(){
-  let context = document.getElementById("modalMail");
-  var myModal = new bootstrap.Modal(context, {});
-  context.querySelector(".modal-body").innerHTML = "Successfully Delete Uesr with ID: ";
-  myModal.show();
+}
+function modal(text, img){
+  $("#modalMail .modal-title").html(text);
+  $('#modalMail').modal('show');
   setTimeout(function () {
-    let context = document.getElementById("modalMail");
-    var myModal = new bootstrap.Modal(context, {});
-        console.log('hejsan');
-        myModal.modal('hide');
+        $('#modalMail').modal('hide');
       }, 3000);
+  $('#contact')[0].reset();
 }

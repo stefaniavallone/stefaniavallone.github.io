@@ -1447,3 +1447,16 @@ portfolio
 #modalTerms .modal-body{
   padding: 15px;
 }
+
+#modalMail .modal-title {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#modalMail .modal-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
