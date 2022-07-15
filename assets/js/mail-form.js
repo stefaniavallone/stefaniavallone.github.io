@@ -5,7 +5,7 @@ function sendMail() {
   body =  $('#body-message').val();
 
   if (fromAddress != "" && subject != "" && body != ""){
-    
+    $(".spinner-border").show();
     var myHeaders = new Headers();
     myHeaders.append("Accept", "*/*");
     myHeaders.append("Referer", "http://127.0.0.1:5500/?subject=Stefania+Avallone&from_address=crispogioele%40gmail.com&to_address=stefaniaavallone3%40gmail.com&body=sfd");
@@ -36,6 +36,7 @@ function sendMail() {
     }
 }
 function modal(text, img){
+  $(".spinner-border").hide();
   $("#modalMail .modal-title").html(text);
   $('#modalMail').modal('show');
   setTimeout(function () {
