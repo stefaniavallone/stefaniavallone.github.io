@@ -27,7 +27,7 @@ function sendMail() {
     };
     
     
-    fetch("https://email-sender-protected.herokuapp.com/send", requestOptions)
+    fetch("https://93u9s5.deta.dev/send", requestOptions)
         .then(response => response.text())
         .then(data => modal("Your email has been sent successfully"))
         .catch(error => {
