@@ -845,7 +845,7 @@ banner
 .scroll-down {
   position: absolute;
   left: 50%;
-  bottom: 1px;
+  bottom: -30px;
   transform: translateX(-50%);
   z-index: 10;
   width: 100%;
@@ -877,6 +877,7 @@ ul.slick-dots {
   display:flex;
   width:100%;
   min-height:420px;
+  overflow: visible;
 }
 
 .left,
