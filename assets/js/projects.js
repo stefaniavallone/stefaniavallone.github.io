@@ -111,10 +111,14 @@ $('#modalProject').on('show.bs.modal', function(e) {
 });
 
 
-$('.carousel-control-prev').click(function() {
+$('.carousel-control-prev').click(function(event) {
+    event.preventDefault();
+    event.stopPropagation();
     $('#carouselIndicators').carousel('prev');
-  });
+});
   
-  $('.carousel-control-next').click(function() {
+$('.carousel-control-next').click(function(event) {
+    event.preventDefault();
+    event.stopPropagation();
     $('#carouselIndicators').carousel('next');
-  });
+});

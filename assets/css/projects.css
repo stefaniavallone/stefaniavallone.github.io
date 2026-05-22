@@ -45,10 +45,16 @@
 
 .carousel-control-prev {
   height: 70vh;
+  background: transparent;
+  border: 0;
+  padding: 0;
 }
 
 .carousel-control-next {
   height: 70vh;
+  background: transparent;
+  border: 0;
+  padding: 0;
 }
 
 .carousel-control-prev-icon {

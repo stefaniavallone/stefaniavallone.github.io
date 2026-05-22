@@ -1,2 +1,11 @@
 # IDE
 .idea
+
+# Local originals kept after AVIF conversion
+assets/images/*.jpg
+assets/images/*.jpeg
+assets/images/*.png
+assets/images/**/*.jpg
+assets/images/**/*.jpeg
+assets/images/**/*.png
+!assets/images/contact.png

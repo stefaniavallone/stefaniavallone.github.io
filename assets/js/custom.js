@@ -51,13 +51,13 @@
 
 
 	// Menu elevator animation
-	$('a[href*=\\#]:not([href=\\#])').on('click', function() {
+		$('a[href*=\\#]:not([href=\\#]):not(.carousel-control-prev):not(.carousel-control-next)').on('click', function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 			if (target.length) {
 				var width = $(window).width();
-				if(width < 991) {
+				if(width < 992) {
 					$('.menu-trigger').removeClass('active');
 					$('.header-area .nav').slideUp(200);	
 				}				
@@ -73,9 +73,9 @@
 		$(document).on("scroll", onScroll);
 	
 		//smoothscroll
-		$('a[href^="#"]').on("click", function(e) {
-		  e.preventDefault();
-		  $(document).off("scroll");
+			$('a[href^="#"]:not(.carousel-control-prev):not(.carousel-control-next)').on("click", function(e) {
+			  e.preventDefault();
+			  $(document).off("scroll");
 	
 		  $("a").each(function() {
 			$(this).removeClass("active");
@@ -85,7 +85,11 @@
 		  var target = this.hash,
 		  menu = target;
 			
-		  var new_target = $(this.hash);
+			  var new_target = $(this.hash);
+			  if (!new_target.length) {
+				$(document).on("scroll", onScroll);
+				return;
+			  }
 		  $("html, body")
 			.stop()
 			.animate(
@@ -147,7 +151,7 @@
 	function mobileNav() {
 		var width = $(window).width();
 		$('.submenu').on('click', function() {
-			if(width < 767) {
+				if(width < 992) {
 				$('.submenu ul').removeClass('active');
 				$(this).find('ul').toggleClass('active');
 			}
